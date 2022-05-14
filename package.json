@@ -1,0 +1,22 @@
+{
+  "name": "codestudy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "f2elint-scan": "f2elint scan",
+    "f2elint-fix": "f2elint fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "f2elint": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "f2elint commit-file-scan",
+      "commit-msg": "f2elint commit-msg-scan"
+    }
+  }
+}
